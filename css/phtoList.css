@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto 100px;
+  position: relative;
+  /* top: 50px; */
+}
+
+.bigImage {
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+  z-index: 4;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.844);
+}
+
+.bigImage > img {
+  width: 90%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes side {
+  0% {
+    width: 500px;
+  }
+  45% {
+    width: 100%;
+  }
+  55% {
+    width: 100%;
+  }
+
+  100% {
+    width: 500px;
+  }
+}
+
+#side {
+  position: fixed;
+  right: -500px;
+  /* right: 0; */
+  width: 500px;
+  height: 100%;
+  background-color: cornflowerblue;
+  z-index: 5;
+  transition: all 0.5s;
+}
+
+input[id="sideCheck"] {
+  display: none;
+}
+
+#sideCheck:checked + div {
+  right: 0;
+  animation: side linear 0.8s;
+}
+
+.sideBar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(168, 168, 235);
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 6;
+  transition: 0.5s;
+}
+
+.sideBar:hover {
+  transform: scale(1.15);
+}
+
+.sideBar span:first-child {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 10px;
+  top: 50%;
+  transform-origin: left top;
+  transform: translateY(-0%) translateX(25%) rotate(-45deg);
+  background-color: black;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.sideBar span:nth-child(2) {
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 10px;
+  top: 50%;
+  /* transform-origin: left top; */
+  transform: translateY(-50%) translateX(45%);
+  background-color: black;
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.sideBar span:last-child {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 10px;
+  top: 50%;
+  transform-origin: left top;
+  transform: translateY(-50%) translateX(50%) rotate(45deg);
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+input[id="sideCheck"]:checked ~ label span:nth-child(1) {
+  width: 80%;
+  transform-origin: center;
+  top: 50%;
+  transform: translateY(-50%) translateX(6px) rotate(45deg);
+}
+
+input[id="sideCheck"]:checked ~ label span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id="sideCheck"]:checked ~ label span:nth-child(3) {
+  width: 80%;
+  transform-origin: center;
+  top: 50%;
+  transform: translateY(-50%) translateX(6px) rotate(-45deg);
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  /* overflow: hidden; */
+}
+
+.header-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  /* padding-bottom: 5px; */
+  border: rgb(60, 60, 60) 3px solid;
+  border-radius: 30px;
+}
+
+.h-box1 {
+  font-style: normal;
+  background-color: rgb(233, 233, 233);
+  flex: 1;
+  position: relative;
+  border-radius: 30px 0 0 30px;
+  border-right: rgb(60, 60, 60) 3px solid;
+}
+
+.h-box1 > a > span {
+  font-size: 85px;
+  font-weight: bold;
+  /* text-align: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+.h-box1:hover > a > span {
+  color: rgb(111, 178, 237);
+}
+
+.h-box2 {
+  background-color: rgb(233, 233, 233);
+  flex: 4;
+  position: relative;
+  border-radius: 0 30px 30px 0;
+}
+
+.nav-list {
+  background-color: transparent;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-list li {
+  width: 100%;
+  height: 100%;
+  flex: 1 1;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list li a {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.nav-list li:hover a {
+  transform: scale(1.15);
+  color: rgb(119, 39, 39);
+}
+
+input[id="navmenu"] {
+  display: none;
+}
+
+input[id="navmenu"] + label {
+  display: block;
+  cursor: pointer;
+  width: 60px;
+  height: 35px;
+  position: relative;
+  /* opacity: 0; */
+  /* transform: translateX(-50%); */
+}
+
+input[id="navmenu"] + label > span {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 30px;
+  color: black;
+  background-color: black;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+input[id="navmenu"] + label > span:nth-child(1) {
+  top: 0;
+  transition: 0.4s;
+}
+
+input[id="navmenu"] + label > span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[id="navmenu"] + label > span:nth-child(3) {
+  bottom: 0;
+  transition: 0.4s;
+}
+
+input[id="navmenu"]:checked + label > span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="navmenu"]:checked + label > span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id="navmenu"]:checked + label > span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.nav-list li:hover label span {
+  transform: scale(1.15);
+  background-color: rgb(119, 39, 39);
+}
+
+.nav-list li:hover label span:nth-child(2) {
+  transform: scale(1.15) translateY(-50%);
+  background-color: rgb(119, 39, 39);
+}
+
+.tabMenu {
+  /* display: none; */
+  position: absolute;
+  /* overflow: hidden; */
+  width: 100%;
+  height: 300px;
+  top: -160px;
+  left: 2px;
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+/* @keyframes tabMenu {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(360deg);
+  }
+  80% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+/* 이상한 키프레임 만들었네.. */
+
+input[id="navmenu"]:checked ~ div {
+  /* display: block; */
+  background-color: rgb(233, 233, 233);
+  position: absolute;
+  width: 126%;
+  height: 300px;
+  z-index: 1;
+  top: 150px;
+  left: -244px;
+  visibility: visible;
+  animation: tabMenu 0.5s linear;
+}
+
+main {
+  margin-top: 5px;
+  width: 100%;
+  min-height: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.mainContainer {
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: minmax(100px, 1fr);
+  grid-gap: 5px;
+}
+
+.leftSideBar {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: rgb(233, 233, 233);
+  border-radius: 30px;
+  border: rgb(60, 60, 60) 3px solid;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.content {
+  grid-column: 2/6;
+  grid-row: 1/2;
+  background-color: rgb(233, 233, 233);
+  border-radius: 30px;
+  border: rgb(60, 60, 60) 3px solid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.photo {
+  width: 48%;
+  min-height: 300px;
+  background-color: lightgray;
+  margin-bottom: 20px;
+  border: solid 1px black;
+}
+
+.photo:nth-child(5),
+.photo:nth-child(6) {
+  margin-bottom: 15px;
+}
+
+.photo:nth-child(2n + 1) {
+  margin-right: 15px;
+}
+
+.photo > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo > div {
+  padding: 5px;
+  font-weight: 600;
+}
+.photo > div > h2 {
+  padding-left: 10px;
+}
+.photo ul {
+  list-style-type: upper-roman;
+  padding-left: 35px;
+}
+
+/* .photo1 ul li span::before {
+  width: 3px;
+  height: auto;
+  content: url(/카메라.png);
+} */
+
+footer {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.hideFooter {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 92%;
+  background-color: rgb(233, 233, 233);
+  border: 2px solid rgb(60, 60, 60);
+  border-radius: 20px;
+  margin-top: 5px;
+  padding-top: 18px;
+  text-align: center;
+}
+
+.hideFooter:hover {
+  opacity: 0;
+}
+
+.footer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  padding-top: 5px;
+  z-index: 0;
+}
+
+.f-box1 {
+  background-color: rgb(233, 233, 233);
+  border: 2px solid rgb(60, 60, 60);
+  border-radius: 20px;
+  flex: 1;
+  padding: 8px;
+  padding-left: 15px;
+}
+
+.f-box2 {
+  background-color: rgb(233, 233, 233);
+  border: 2px solid rgb(60, 60, 60);
+  border-radius: 20px;
+  flex: 6;
+  padding: 5px;
+  padding-left: 15px;
+  font-size: medium;
+}

@@ -18,7 +18,7 @@ body {
   /* top: 100px; */
 }
 
-@keyframes side {
+/* @keyframes side {
   0% {
     width: 500px;
   }
@@ -32,7 +32,7 @@ body {
   100% {
     width: 500px;
   }
-}
+} */
 
 #side {
   position: fixed;
@@ -40,9 +40,61 @@ body {
   /* right: 0; */
   width: 500px;
   height: 100%;
-  background-color: cornflowerblue;
+  background-color: rgb(240, 233, 193);
   z-index: 5;
   transition: all 0.5s;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+#side > span {
+  font-size: 50px;
+}
+
+#memoBox {
+  display: flex;
+  margin-top: 20px;
+  width: 334px;
+  border: 2px solid black;
+}
+
+#memoForm {
+  font-size: 0;
+}
+
+#memoForm > input {
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+#memoBox > button,
+#memoForm > button {
+  padding: 5px;
+  font-size: 20px;
+  width: 90px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#memo {
+  list-style-type: none;
+  margin-top: 20px;
+  padding-left: 20px;
+  line-height: 200%;
+  font-size: 30px;
+}
+
+#memo li button {
+  position: absolute;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 3px solid black;
+  font-weight: 1000;
+  font-size: 25px;
 }
 
 input[id="sideCheck"] {
@@ -60,7 +112,7 @@ input[id="sideCheck"] {
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: rgb(168, 168, 235);
+  background-color: rgb(240, 233, 193);
   border-radius: 30px;
   cursor: pointer;
   z-index: 6;
@@ -450,7 +502,7 @@ main {
   color: black;
   border: 1px black solid;
   border-radius: 100%;
-  font-size: large;
+  font-size: 40px;
   top: 50%;
   left: 50%;
   position: absolute;

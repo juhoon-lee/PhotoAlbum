@@ -12,7 +12,15 @@
   <div class="bigImage"></div>
   <input type="checkbox" id="sideCheck">
     <div id="side">
-      사이드바
+      <span>메모장</span>
+      <div id="memoBox">
+      <form id="memoForm">
+        <input type="text" required  placeholder="여기에 입력!">
+        <button>추가</button>
+      </form>
+      <button id="removeAll">전체 삭제</button>
+      </div>
+      <ul id="memo"></ul>
     </div>
       <label for="sideCheck">
         <div class="sideBar">
@@ -48,7 +56,7 @@
     <div class="mainContainer">
       <div class="leftSideBar">
         사진을 클릭해 보세요.<br><br>
-        사이드바 아이디어가 아직 없네요.
+        사이드바
       </div>
       <div class="content">
         <div class="photo photo1">
@@ -58,7 +66,6 @@
             <ul>
               <li>흑백</li>
               <li>어두움</li>
-              <li>시간의 흐름</li>
             </ul>
           </div>
         </div>
@@ -80,7 +87,6 @@
             <ul>
               <li>컬러</li>
               <li>밝음</li>
-              <li>파란 느낌</li>
             </ul>
           </div>
         </div>
@@ -90,7 +96,6 @@
             <h2>4번 사진 </h2>
             <ul>
               <li>컬러</li>
-              <li>하이 콘트라스트</li>
               <li>하이 텍스쳐</li>
             </ul>
           </div>
@@ -101,7 +106,6 @@
             <h2>5번 사진 </h2>
             <ul>
               <li>컬러</li>
-              <li>밝은부분 밝게</li>
             </ul>
           </div>
         </div>
@@ -134,6 +138,7 @@
       </div>
     </div>
   </footer>
+  <script src="../js/memo.js"></script>
   <script src="../js/ing.js"></script>
   <script src="../js/showImage.js"></script>
 </body>

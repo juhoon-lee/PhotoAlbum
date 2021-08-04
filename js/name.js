@@ -6,7 +6,7 @@ const clear =document.querySelector(".box2-2 > button");
 
 const clearLocal = (event) =>{
   event.preventDefault();
-  localStorage.clear();
+  localStorage.removeItem("name");
   location.reload();
 }
 
@@ -33,6 +33,7 @@ const printUserName = (userName) => {
 
 const handleButton = (event) =>{
   event.preventDefault();
+  clear.innerText="로그아웃";
   localStorage.setItem("name" , userName.value);
   printUserName(userName.value);
   userName.value = "";

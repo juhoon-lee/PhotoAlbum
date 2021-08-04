@@ -12,6 +12,15 @@
   <div class="bigImage"></div>
   <input type="checkbox" id="sideCheck">
     <div id="side">
+      <span>메모장</span>
+      <div id="memoBox">
+      <form id="memoForm">
+        <input type="text" required  placeholder="여기에 입력!">
+        <button>추가</button>
+      </form>
+      <button id="removeAll">전체 삭제</button>
+      </div>
+      <ul id="memo"></ul>
     </div>
       <label for="sideCheck">
         <div class="sideBar">
@@ -47,7 +56,7 @@
     <div class="mainContainer">
       <div class="leftSideBar">
         사진을 클릭해 보세요.<br><br>
-        사이드바 아이디어가 아직 없네요.
+        사이드바
       </div>
       <div class="content">
         <div class="photo photo1">
@@ -56,7 +65,6 @@
             <h2>1번 사진 </h2>
             <ul>
               <li>역광</li>
-              <li>어두움</li>
             </ul>
           </div>
         </div>
@@ -66,7 +74,6 @@
             <h2>2번 사진 </h2>
             <ul>
               <li>밝음</li>
-              <li>갈대</li>
             </ul>
           </div>
         </div>
@@ -85,7 +92,6 @@
           <div>
             <h2>4번 사진 </h2>
             <ul>
-              <li>시원</li>
               <li>하늘</li>
             </ul>
           </div>
@@ -104,7 +110,6 @@
           <div>
             <h2>6번 사진 </h2>
             <ul>
-              <li>역광</li>
               <li>5번과 같음</li>
             </ul>
           </div>
@@ -128,6 +133,7 @@
       </div>
     </div>
   </footer>
+  <script src="../js/memo.js"></script>
   <script src="../js/ing.js"></script>
   <script src="../js/showImage.js"></script>
 </body>

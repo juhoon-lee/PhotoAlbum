@@ -7,4 +7,4 @@ function sorry() {
 }
 
 tab.onclick = sorry;
-side.onclick = sorry;
+// side.onclick = sorry;

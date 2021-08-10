@@ -1,2 +1,2 @@
 # practice
-html,css 연습
+html,css,js 연습
